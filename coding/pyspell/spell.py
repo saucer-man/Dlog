@@ -9,20 +9,19 @@ class lcsobj():
     # 初始化参数
     def __init__(self, objid, seq, lineid, refmt):
         # 0 ['this', 'is', 'a', 'pen'] 1 [\s]+
-        self._refmt = refmt
+        self._refmt = refmt   # 这个是分隔符，空格 \n \r之类的
         if isinstance(seq, str) == True:
             self._lcsseq = re.split(self._refmt, seq.lstrip().rstrip())
         else:
             self._lcsseq = seq
         self._lineids = [lineid]
-        self._pos = []  # _pos就是lcs列表中值为*的下标
+        self._pos = []   # _pos就是lcs列表中值为*的下标
         self._sep = "	"
         self._id = objid
         return
 
-    # return seq和self._lcsseq相同元素的个数
+    # return seq和self._lcsseq相同元素的个数，用来计算最长公共子序列
     def getlcs(self, seq):
-
         if isinstance(seq, str) == True:
             seq = re.split(self._refmt, seq.lstrip().rstrip())
         count = 0
@@ -220,7 +219,7 @@ class lcsmap():
 
         return obj
 
-    # 判断seq是否已经存在在obj列表中
+    # 判断seq是否已经存在在obj列表中，基于LCS
     def match(self, seq):
         # seq = ['this', 'is', 'a', 'pen']
         if isinstance(seq, str) == True:

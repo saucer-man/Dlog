@@ -4,6 +4,7 @@ import sys
 import spell as s
 
 if __name__ == '__main__':
+    print("First, use train.txt to train")
     slm = s.lcsmap('[\\s]+')
     with open("./train.log", 'r', encoding='utf-8') as f:
         for i in f.readlines():  # sys.stdin.readlines():
@@ -12,7 +13,7 @@ if __name__ == '__main__':
             # print(obj.get_id(), obj.param(sub))
 
     # 打印出结果，postion的意思是*的下标位置
-    print("处理好的日志为")
+    print("training done\nthe lcsmap are: ")
     slm.dump()
     # 0 {"lcsseq": "this is * pen ", "lineids": [1, 2, 3], "postion": [2]}
     # 1 {"lcsseq": "i am * ", "lineids": [4, 5], "postion": [2]}
@@ -24,8 +25,10 @@ if __name__ == '__main__':
     # 加载保存好的结果
     slm = s.load('test.pickle')
     #slm.dump()
+
+    print("Second, test test.log")
     with open("./test.log", 'r', encoding='utf-8') as f:
-        print("训练的结果为：")
+        print("test result are: ")
         for i in f.readlines():
             sub = i.strip('\n')
             obj = slm.match(sub)
