@@ -1,8 +1,8 @@
-# 基于深度学习的主机检测
+# 基于LSTM神经网络模型的日志异常检测
 
-## 1. paper reading 
+主要基于Deeplog实现
 
-- Experience Report- System Log Analysis for Anomaly Detection
-- Recurrent Neural Network Language Models for Open Vocabulary Event-Level Cyber Anomaly Detection
-- System-Log-Analysis-for-Anomaly-Detection
+- DeepLog - Anomaly Detection and Diagnosis from System Logs through Deep Learning
+
+(部分paper来源于知网，请尊重版权~)
 

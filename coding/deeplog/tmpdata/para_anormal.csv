@@ -1,0 +1,2 @@
+LineId,Month,Date,Time,Type,Component,Content,EventId,EventTemplate,ParameterList
+769,Jul,4,09:33:09,combo,sshd(pam_unix)[2543],authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=210.76.59.29 user=root,0,authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= * ,"[['rhost=210.76.59.29', 'user=root'], '19460']"
