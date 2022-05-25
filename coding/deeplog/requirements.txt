@@ -36,7 +36,7 @@ protobuf==3.11.4
 pyasn1==0.4.8
 pyasn1-modules==0.2.7
 pycparser==2.19
-PyJWT==1.7.1
+PyJWT==2.4.0
 pylint==2.3.1
 pyOpenSSL==19.1.0
 pyreadline==2.1
