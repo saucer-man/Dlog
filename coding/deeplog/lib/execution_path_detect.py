@@ -14,7 +14,7 @@ def standard_log_key(log_key_sequence_str):
     tokens = [int(i) for i in tokens]
     K = max(tokens)+1  # 日志键的种类个数
     # print("the tokens are:",tokens)
-    bigramfdist_4 = FreqDist()
+    # bigramfdist_4 = FreqDist()
     bigrams_4 = ngrams(tokens, 4)
     # from nltk.util import ngrams
     # a = ['1', '2', '3', '4', '5']
@@ -26,10 +26,11 @@ def standard_log_key(log_key_sequence_str):
     # ('2', '3')
     # ('3', '4')
     # ('4', '5')
-    bigramfdist_4.update(bigrams_4)
-    print("the bigramfdsit_4 is:", list(bigramfdist_4.keys()))
+    # bigramfdist_4.update(bigrams_4)
+    # print("the bigramfdsit_4 is:", list(bigramfdist_4.keys()))
     # we set the length of history logs as 3
-    seq = np.array(list(bigramfdist_4.keys()))
+    # seq = np.array(list(bigramfdist_4.keys()))
+    seq = np.array(list(bigrams_4))
 
     # print("the seq is:",seq)
     X, Y = seq[:, :3], seq[:, 3:4]
